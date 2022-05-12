@@ -1,0 +1,19 @@
+{
+    "name": "arduino_web_io",
+    "version": "1.0.0",
+    "description": "API to access aurduino internal data over a network with usb connection.",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Keshav Vedant",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.0.1",
+        "express": "^4.18.0",
+        "mongodb": "^4.5.0",
+        "nodemon": "^2.0.16",
+        "serialport": "^10.4.0",
+        "socket.io": "^4.5.0"
+    }
+}
