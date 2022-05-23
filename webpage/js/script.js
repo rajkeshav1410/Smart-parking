@@ -1,7 +1,6 @@
-var socket = io('localhost:3000');
-
-var npark = 6;
+var npark = 4;
 var timeData = {};
+var url = 'https://rajkeshav1410.github.io/Smart-parking/';
 
 var parking = function(data) {
     var filled = 0;
@@ -85,6 +84,8 @@ checkGate = function(data) {
     }
 };
 
+var socket = io(url);
+
 socket.on('sensor', function(data) {
     parking(data);
     checkGate(data);
@@ -92,8 +93,6 @@ socket.on('sensor', function(data) {
 });
 
 window.onload = function() {
-
-
     for (i = 1; i <= npark; i++) {
         timeData[`ir${i}`] = {
             "entryTime": 0,

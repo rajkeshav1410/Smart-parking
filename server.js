@@ -18,7 +18,7 @@ const server = app.listen(portn, () => {
  */
 const { SerialPort } = require('serialport');
 const { ReadlineParser } = require('@serialport/parser-readline');
-const port = new SerialPort({ path: "COM5", baudRate: 9600 });
+const port = new SerialPort({ path: "COM5", baudRate: 115200 });
 const parser = new ReadlineParser();
 port.pipe(parser);
 
