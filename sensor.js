@@ -10,7 +10,6 @@ var data = {
     "ir2": 0,
     "ir3": 0,
     "ir4": 0,
-    "ir5": 0,
     "gate": 0
 };
 const sleep = async function() {
@@ -25,8 +24,6 @@ const sleep = async function() {
         data.ir2 = Math.round(Math.random());
         data.ir3 = Math.round(Math.random());
         data.ir4 = Math.round(Math.random());
-        data.ir5 = Math.round(Math.random());
-        data.ir6 = Math.round(Math.random());
         data.gate = Math.round(Math.random());
         parentPort.postMessage(data);
     }

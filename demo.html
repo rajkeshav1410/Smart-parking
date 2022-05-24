@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js"; import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+    const firebaseConfig = { apiKey: "AIzaSyDr_W2TH9vNJG0XKANkfEkI0MZyxExMsug", authDomain: "iot-ssh.firebaseapp.com", databaseURL: "https://iot-ssh-default-rtdb.firebaseio.com", projectId: "iot-ssh", storageBucket: "iot-ssh.appspot.com", messagingSenderId:
+    "249538182307", appId: "1:249538182307:web:033c3123275da03128d316", measurementId: "G-KGBCC432RD" }; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app); const db = getDatabase(app); const dbRef = ref(getDatabase()); get(child(dbRef,
+    `link/ssh`)).then((snapshot) => { if (snapshot.exists()) { console.log(snapshot.val()); } else { console.log("No data available"); } }).catch((error) => { console.error(error); });
+</script>
+
+</html>
